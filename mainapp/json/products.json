@@ -1,0 +1,20 @@
+[
+  {
+    "category": "Настольная лампа",
+    "name": "Lakuulkalukl",
+    "price": 2500,
+    "quantity": 5
+  },
+  {
+    "category": "Диван",
+    "name": "БАРОН",
+    "price": 56800,
+    "quantity": 3
+  },
+  {
+    "category": "Стол",
+    "name": "Дерево-2Д",
+    "price": 18900,
+    "quantity": 3
+  }
+]

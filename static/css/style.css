@@ -1,0 +1,8 @@
+.red {
+    color: red;
+    font-size: 30px;
+}
+
+.category_record.not_active {
+    opacity: 0.5;
+}

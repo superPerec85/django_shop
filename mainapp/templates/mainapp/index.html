@@ -1,0 +1,22 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title|title }}
+{% endblock %}
+
+{% block content %}
+  {% for product in products %}
+    <div class="block">
+      <a href="{% url 'products:product' product.pk %}">
+        <img src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
+        <div class="text">
+          <h3>{{ product.category.name }}</h3>
+          <h4>{{ product.name }}</h4>
+          <p>{{ product.description }}</p>
+        </div>
+      </a>
+    </div>
+  {% endfor %}
+{% endblock %}
+

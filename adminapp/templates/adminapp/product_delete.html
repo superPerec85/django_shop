@@ -1,0 +1,26 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+
+
+{% block content %}
+  <div class="category_delete">
+    Уверены, что хотите удалить {{ category_to_delete.username }}
+    {% if category_to_delete.first_name %}
+      <b>({{ category_to_delete.first_name|title }}</b>
+      {% if category_to_delete.last_name %}
+        {{ category_to_delete.last_name|title }}
+      {% endif %})
+    {% endif %}
+    ?
+    <form action="{% url 'admin:product_delete' product_to_delete.pk %}"
+          method="post">
+      {% csrf_token %}
+      <input class="btn btn-danger" type="submit" value="удалить">
+    </form>
+    <button class="btn btn-success">
+      <a href="{% url 'admin:categories' %}">
+        Отмена
+      </a>
+    </button>
+  </div>
+{% endblock %}
